@@ -8,13 +8,13 @@ Example of a microservice written in Ruby, with the [Sinatra](http://www.sinatra
 To build the microservice Docker image, execute the build script :
 
 ```
-./build.sh
+./docker-build.sh
 ```
 
 Once the container is created, executed it with the following command :
 
 ```
-docker run -ti -p 8080:80 msa-template-ruby:1.0.0
+docker run -ti -p 8080:80 msagency/msa-template-ruby:1.0.0
 ```
 
 ## Endpoints
@@ -23,11 +23,13 @@ docker run -ti -p 8080:80 msa-template-ruby:1.0.0
 
 ## Standard endpoints
 
-- [/version](/version) : returns the version number
+- [/ms/version](/ms/version) : returns the version number
 
-- [/name](/name) : returns the name
+- [/ms/name](/ms/name) : returns the name
 
-- [/readme](/readme) : returns the readme (this file)
+- [/ms/readme.md](/ms/readme.md) : returns the readme (this file)
+
+- [/ms/readme.html](/ms/readme.html) : returns the readme as html
 
 - [/swagger/swagger.json](/swagger/swagger.json) : returns the swagger api documentation
 
@@ -35,7 +37,7 @@ docker run -ti -p 8080:80 msa-template-ruby:1.0.0
 
 - [/nginx/stats.json](/nginx/stats.json) : returns stats about Nginx
 
-- [/nginx/dashboard](/nginx/dashboard) : returns a dashboard displaying the stats from Nginx
+- [/nginx/stats.html](/nginx/stats.html) : returns a dashboard displaying the stats from Nginx
 
 ## About
 
